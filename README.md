@@ -4,7 +4,7 @@
 
 ## Running this project
 
-For local development cors need to be deactivated in the browser. [This plugin](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc  ) can diable cors
+For local development cors need to be deactivated in the browser. [This plugin](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc  ) can disable cors
 
 Clone this repository
 
