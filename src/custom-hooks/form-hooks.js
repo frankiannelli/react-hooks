@@ -1,15 +1,21 @@
 import { useState } from 'react';
+import validateAddress from '../services/validate-address';
 
-const useForm = (initialValues, callback) => {
+const useForm = (initialValues) => {
   const [inputs, setInputs] = useState(initialValues);
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     if (event) event.preventDefault();
-    callback();
+    const { suburb, state, postCode } = inputs;
+    const formMessage = await validateAddress(suburb, state, postCode);
+    setInputs((inputs) => ({ ...inputs, formMessage }));
   };
+
   const handleInputChange = (event) => {
     event.persist();
     setInputs((inputs) => ({ ...inputs, [event.target.name]: event.target.value }));
   };
+
   return {
     handleSubmit,
     handleInputChange,
