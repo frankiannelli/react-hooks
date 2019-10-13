@@ -10,35 +10,40 @@ const Form = () => {
   });
 
   return (
-    <div className="form-style-8">
+    <div className="form-style">
+      <h2>Address Validator</h2>
       <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="suburb"
-            placeholder="Suburb"
-            onChange={handleInputChange}
-            value={inputs.suburb}
-            required
-          />
-          <input
-            type="text"
-            name="state"
-            placeholder="State"
-            onChange={handleInputChange}
-            value={inputs.state}
-            required
-          />
-          <input
-            type="text"
-            name="postCode"
-            placeholder="Post Code"
-            onChange={handleInputChange}
-            value={inputs.postCode}
-            required
-          />
+        <input
+          type="text"
+          name="suburb"
+          placeholder="Suburb"
+          onChange={handleInputChange}
+          value={inputs.suburb}
+          required
+        />
+        <input
+          type="text"
+          name="state"
+          placeholder="State"
+          onChange={handleInputChange}
+          value={inputs.state}
+          required
+        />
+        <input
+          type="text"
+          name="postCode"
+          placeholder="Post Code"
+          onChange={handleInputChange}
+          value={inputs.postCode}
+          required
+        />
         <button type="submit">Validate Address</button>
       </form>
-      {inputs.formMessage && <span>{inputs.formMessage}</span>}
+      <div className="message">
+        {inputs.formMessage
+          ? inputs.formMessage
+          : 'Please enter the address details'}
+      </div>
     </div>
   );
 };
