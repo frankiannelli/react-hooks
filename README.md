@@ -1,20 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Post Code Address Validator
 
-## Available Scripts
+![postcode validator preview](./preview.gif)
 
-In the project directory, you can run:
+## Running this project
 
-### `yarn start`
+For local development cors need to be deactivated in the browser. [This plugin](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc  ) can diable cors
 
-Runs the app in the development mode.<br />
+Clone this repository
+
+### `npm install`
+
+### `npm start`
+
+This runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Running tests
 
-### `yarn test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-user can copy paste into the postcode field
